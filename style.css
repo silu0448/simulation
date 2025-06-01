@@ -1,0 +1,172 @@
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      padding: 15px;
+      min-height: 100vh;
+      background-color: #e8f0fe; 
+      color: #333; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+#m {
+           font-size: 1.8rem;
+           margin-bottom: 20px;
+            height: 100px;
+            animation: mymove 10s infinite;
+        }
+        @keyframes mymove {
+            0% { background-color: red; }
+            16% { background-color: orange; }
+            33% { background-color: yellow; }
+            50% { background-color: green; }
+            66% { background-color: blue; }
+            83% { background-color: indigo; }
+            100% { background-color: violet; }
+        }
+
+
+
+    
+    label {
+      font-size: 1rem;
+      color: #1e3a8a; 
+      margin-bottom: 5px;
+    }
+    input, select {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 2px solid #3b82f6; 
+      border-radius: 5px;
+      font-size: 1rem;
+      background-color: #ffffff;
+      color: #333;
+    }
+    input:focus, select:focus {
+      outline: none;
+      border-color: #2563eb; 
+      box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+    }
+    button {
+      background-color: #10b981; 
+      color: #ffffff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+      max-width: 300px;
+    }
+    button:hover {
+      background-color: #059669; 
+    }
+    .output {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #93c5fd; 
+      background-color: #f9fafb; 
+      border-radius: 8px;
+      width: 100%;
+      max-width: 300px;
+      font-size: 0.95rem;
+      color: black; 
+    }
+    #excessOxygenContainer, #coContainer {
+      display: none;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+    .reaction {
+      font-family: 'Courier New', monospace;
+      margin-bottom: 10px;
+      background-color: #e5e7eb; 
+      padding: 8px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    /* Phone (<600px) */
+    @media (max-width: 599px) {
+      body {
+        padding: 10px;
+        background-color: #f3e8ff; 
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      label {
+        font-size: 0.9rem;
+      }
+      input, select, button {
+        max-width: 100%;
+        font-size: 0.9rem;
+        padding: 8px;
+      }
+      .output {
+        max-width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        color: red;
+      }
+      .reaction {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Tablet (600px–1023px) */
+    @media (min-width: 600px) and (max-width: 1023px) {
+      body {
+        background-color: #fef3c7; 
+      }
+      h2 {
+        font-size: 1.7rem;
+      }
+      input, select, button {
+        max-width: 400px;
+        font-size: 1rem;
+        padding: 10px;
+      }
+      .output {
+        max-width: 400px;
+        padding: 15px;
+        font-size: 0.95rem;
+      }
+      .reaction {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* PC (≥1024px) */
+    @media (min-width: 1024px) {
+      body {
+        background-color: #e8f0fe; /* Light blue for PCs */
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      input, select, button {
+        max-width: 500px;
+        font-size: 1.1rem;
+        padding: 12px;
+      }
+      .output {
+        max-width: 500px;
+        padding: 20px;
+        font-size: 1rem;
+      }
+      .reaction {
+        font-size: 1rem;
+      }
+    }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure responsiveness -->
+  <title>Combustion Air & Product Calculator</title>
+  <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+
+</head>
+<body>
+
+
+<div id="m">
+        <h2>ይህ የ ሰለሽ ዌብሳይት ነው</h2>
+        <h2>Combustion Calculator</h2>
+    </div>
+
+<label>Carbon atoms (n): <input type="number" id="carbon" placeholder="Number of Carbon atoms" min="1"></label>
+<label>Hydrogen atoms (m): <input type="number" id="hydrogen" placeholder="Number of Hydrogen atoms" min="0"></label>
+<label>Mixture Type:
+  <select id="mixtureType" onchange="toggleInputs()">
+    <option value="stoichiometric">Stoichiometric</option>
+    <option value="lean">Lean</option>
+    <option value="rich">Rich</option>
+  </select>
+</label>
+<div id="excessOxygenContainer">
+  <label>Excess Oxygen (moles): <input type="number" id="excessOxygen" placeholder="Excess O₂ moles" min="0" step="0.1"></label>
+</div>
+<div id="coContainer">
+  <label>CO Produced (moles): <input type="number" id="coMoles" placeholder="CO moles" min="0" step="0.1"></label>
+</div>
+
+<button onclick="calculate()">Calculate</button>
+
+<div class="output" id="results"></div>
+
+</body>
+</html>
